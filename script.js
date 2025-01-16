@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (type === "guest") {
             sectionTitle = "<h1>GOST</h1>";
             nameField = '<label>Ime i prezime: <input type="text" name="guest_name[]" required></label><br>';
-            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="guest_preference[]" value="A">svinjetina</label>' +
-                               '<label><input type="checkbox" name="guest_preference[]" value="B">janjetina</label><br>';
+            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="guest_preference[]" value="svinjetina">svinjetina</label>' +
+                               '<label><input type="checkbox" name="guest_preference[]" value="janjetina">janjetina</label><br>';
             noteField = '<label>Napomena: <input type="text" name="guest_note[]" id="napomenaField" placeholder="Molimo navesti posebnu prehranu, alergije i druge zdravstvene probleme ukoliko postoje"></label>';
         } else if (type === "partner") {
             sectionTitle = "<h1>PRATNJA</h1>";
             nameField = '<label>Ime i prezime: <input type="text" name="partner_name[]" required></label><br>';
-            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="partner_preference[]" value="A">svinjetina</label>' +
-                               '<label><input type="checkbox" name="partner_preference[]" value="B">janjetina</label><br>';
+            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="partner_preference[]" value="svinjetina">svinjetina</label>' +
+                               '<label><input type="checkbox" name="partner_preference[]" value="janjetina">janjetina</label><br>';
             noteField = '<label>Napomena: <input type="text" name="partner_note[]" id="napomenaField" placeholder="Molimo navesti posebnu prehranu, alergije i druge zdravstvene probleme ukoliko postoje"></label>';
         } else if (type === "child") {
             sectionTitle = "<h1>DIJETE</h1>";
             nameField = '<label>Ime i prezime: <input type="text" name="child_name[]" required></label><br>';
-            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="child_preference[]" value="A">svinjetina</label>' +
-                               '<label><input type="checkbox" name="child_preference[]" value="B">janjetina</label><br>';
+            preferenceField = 'Izbor hrane: <label><input type="checkbox" name="child_preference[]" value="svinjetina">svinjetina</label>' +
+                               '<label><input type="checkbox" name="child_preference[]" value="janjetina">janjetina</label><br>';
             noteField = '<label>Napomena: <input type="text" name="child_note[]" id="napomenaField" placeholder="Molimo navesti posebnu prehranu, alergije i druge zdravstvene probleme ukoliko postoje"></label>';
         }
 
