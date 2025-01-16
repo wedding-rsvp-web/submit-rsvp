@@ -137,7 +137,11 @@ document.addEventListener("DOMContentLoaded", function () {
        
         emailjs.send("service_1i74p71", "template_j286tui", emailData)
             .then(function(response) {
-                const combinedNames = [...output["guest_name[]"], ...output["partner_name[]"], ...output["child_name[]"]];
+                const combinedNames = [
+                    ...(Array.isArray(output["guest_name[]"]) ? output["guest_name[]"] : []),
+                    ...(Array.isArray(output["partner_name[]"]) ? output["partner_name[]"] : []),
+                    ...(Array.isArray(output["child_name[]"]) ? output["child_name[]"] : [])
+                ];
                 let result = '';
                 if (combinedNames.length > 1) {
                     result = combinedNames.slice(0, -1).join(', ') + ' i ' + combinedNames[combinedNames.length - 1];
