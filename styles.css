@@ -1,0 +1,286 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('./data/bck.png');
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #202124;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    font-style: italic;
+}
+
+input::placeholder {
+    font-style: italic;
+    color: rgb(177, 177, 177);
+}
+
+.fusnote {
+    font-size: 0.9em;
+}
+
+#rsvpForm {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.form-section label {
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.form-section h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.cancel-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    background-color: #047c5e;
+    color: white;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 4px;
+    z-index: 1;
+
+    outline: none;
+    box-sizing: border-box;
+    background-image: linear-gradient(180deg, #f6e27a 20%, #cb9b51 80%);
+    box-shadow: 0 4px 12px 0 #ffcd57;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position:center;
+}
+
+.cancel-btn:focus,
+.cancel-btn:hover {
+background-size: 150% 150%;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
+                inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+border: 1px solid rgba(165,93,7,.6);
+}
+
+.cancel-btn:active {
+box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+            inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+
+input[type="text"]:focus, textarea:focus, input[type="email"]:focus {
+    border-color: #ffd700;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"], textarea, input[type="email"] {
+    width: 97%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background-color: #f4f7fb;
+    display: block;
+    border: 1px solid #ffd700;
+}
+
+
+input[type="checkbox"] {
+    margin-bottom: 8px;
+}
+
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    padding: 10px;
+}
+
+#addButtonsContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#addPartner, #addChild {
+    width: 48%;
+}
+
+.section-outer {
+    background-image: url('./data/marble_bck_1.jpg');
+    border: 1px solid #ffd700;
+}
+
+
+button {
+    display: block;
+    width: auto;
+    margin: 15px auto;
+}
+
+.golden-btn {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    height: 2.75em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    background-image: linear-gradient(180deg, #f6e27a 20%, #cb9b51 80%);
+    box-shadow: 0 4px 12px 0 #ffcd57;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position:center;
+    color: #f8f8f8;
+}
+
+.golden-btn:focus,
+.golden-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
+                    inset 0 -2px 5px 1px #b17d10,
+                    inset 0 -1px 1px 3px rgba(250,227,133,1);
+    border: 1px solid rgba(165,93,7,.6);
+    font-size: 1.13em;
+}
+
+.golden-btn:active {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+                inset 0 -2px 5px 1px #b17d10,
+                    inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+#submitBtn {
+    width: 40%;
+    max-width: 400px;
+    margin: 15px auto;
+    display: block;
+    justify-content: center;
+}
+
+.gold-title {
+    font-family: 'PT Sans';
+    font-size: 10vmin;
+    color: rgb(218,165,32);
+    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(218,165,32,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(212,175,55,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+#messageContainer {
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    #addButtonsContainer {
+        flex-direction: column;
+    }
+
+    #addPartner, #addChild {
+        width: 100%;
+    }
+
+    #napomenaField {
+        height: 100px; 
+        vertical-align: top;
+    }
+    
+    #napomenaField::placeholder {
+        text-align: left; 
+        white-space: normal; 
+        word-wrap: break-word;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding RSVP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="gold-title">RSVP</h1>
+
+    <form id="rsvpForm" autocomplete="off">
+        <div id="formContainer">
+            <div class="form-section section-outer">
+                <div class="form-section">
+                    <h1>PODACI</h1>
+                    <label>Ime i prezime: <input type="text" name="guest_name[]" required></label><br>
+                    Izbor hrane:
+                    <label><input type="checkbox" name="guest_preference[]" value="svinjetina"> svinjetina</label>
+                    <label><input type="checkbox" name="guest_preference[]" value="janjetina"> janjetina</label><br>
+                    <label>Napomena: <input type="text" name="guest_note[]" id="napomenaField" placeholder="Molimo navesti posebnu prehranu, alergije i druge zdravstvene probleme ukoliko postoje"></label>
+                </div>
+            </div>
+        </div>
+
+        <div id="addButtonsContainer">
+            <button class="golden-btn" type="button" id="addPartner"> + Dodaj pratnju</button>
+            <button class="golden-btn" type="button" id="addChild"> + Dodaj dijete</button>
+        </div>
+
+        <div class="form-section section-outer">
+            <div class="form-section" id="emailSection">
+                <h2 class="fusnote" >Slike sa svatova biti će dostupne na Google Drive-u kada ih fotograf isporuči. <br> Kako bi osigurali da svi dobiju pristup slikama molim ostaviti email adresu/e <br> (više adresa odvojiti zarezom)</h2>
+                <label> <input type="text" name="guest_email" id="emailInput"></label>
+            </div>
+        </div>
+
+        <button class="golden-btn" id="submitBtn" type="submit">Dostavi potvrdu</button>
+        <div id="messageContainer"></div>
+        
+    </form>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "TRuCAnkz9dTY7ES0N",
+          });
+      })();
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
