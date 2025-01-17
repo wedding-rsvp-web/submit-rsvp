@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         innerSection.className = "form-section";
         const messageParagraph = document.createElement("p");
        
-        emailjs.send("service_1i74p71", "template_j286tui", emailData)
+        emailjs.send("service_powbbx9", "template_ykt7rtu", emailData)
             .then(function(response) {
                 const combinedNames = [
                     ...(Array.isArray(output["guest_name[]"]) ? output["guest_name[]"] : []),
