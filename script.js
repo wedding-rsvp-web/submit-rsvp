@@ -65,10 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
         section.appendChild(cancelButton);
         section.appendChild(createCommonFields(type));
         formContainer.appendChild(section);
-
-        // if (type === "partner") {
-        //     addPartnerButton.style.display = "none";
-        // }
     }
 
     addPartnerButton.addEventListener("click", () => addFormSection("partner"));
