@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
         section.appendChild(createCommonFields(type));
         formContainer.appendChild(section);
 
-        if (type === "partner") {
-            addPartnerButton.style.display = "none";
-        }
+        // if (type === "partner") {
+        //     addPartnerButton.style.display = "none";
+        // }
     }
 
     addPartnerButton.addEventListener("click", () => addFormSection("partner"));
@@ -98,9 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (output["partner_name[]"] && output["partner_name[]"].length) {
             emailContent += `<h3>PARTNER</h3>`;
-            emailContent += `<p><strong>Name:</strong> ${output["partner_name[]"].join(", ")}</p>`;
-            emailContent += `<p><strong>Preferences:</strong> ${output["partner_preference[]"] && output["partner_preference[]"].length ? output["partner_preference[]"].join(", ") : "None"}</p>`;
-            emailContent += `<p><strong>Note:</strong> ${output["partner_note[]"] && output["partner_note[]"].length ? output["partner_note[]"].join(", ") : "None"}</p>`;
+            output["partner_name[]"].forEach((partnerName, index) => {
+                emailContent += `<p><strong>Name:</strong> ${partnerName}</p>`;
+                emailContent += `<p><strong>Preferences:</strong> ${output["partner_preference[]"] && output["partner_preference[]"][index] ? output["partner_preference[]"][index] : "None"}</p>`;
+                emailContent += `<p><strong>Note:</strong> ${output["partner_note[]"] && output["partner_note[]"][index] ? output["partner_note[]"][index] : "None"}</p>`;
+            });
         }
 
         if (output["child_name[]"] && output["child_name[]"].length) {
